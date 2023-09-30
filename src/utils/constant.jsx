@@ -1,0 +1,2 @@
+const optionKey="AIzaSyCm3J3HTnSKJg5lHZB5j2Rc5KQ2jmnILHo"
+export const YOUTUBE_API_KEY="https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key="+optionKey
