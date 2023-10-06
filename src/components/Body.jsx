@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom'
 const Body = () => {
     const sidebar=useSelector(store=>store.sidebarname.isMenu)
   return (
-    <div className='flex  pt-[5rem]'>
+    <div className='flex  pt-[4rem]'>
        {
         sidebar && 
         <Sidebar/>

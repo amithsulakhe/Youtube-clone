@@ -6,6 +6,7 @@ import CommentSection from './CommentSection'
 import LiveSection from './LiveSection'
 
 const Watchlist = () => {
+  const darkmoder = useSelector(store => store.enabledarkmod.isMode)
 
     const [params]=useSearchParams()
     const dispatch=useDispatch()
@@ -13,10 +14,9 @@ const Watchlist = () => {
 dispatch(closesidebar())
     },[])
   return (
-    <div className='px-4 w-full'>
-      <div className='flex w-full'>
+    <div className='py-2 w-full'>
+      <div className={`flex w-full ${!darkmoder?"bg-black text-white":"bg-white text-black"}`}>
 
-    
       <div>
 
         <iframe width="900" height="500" allowFullScreen="1" src={"https://www.youtube.com/embed/"+params.get("v")+"?si=HSVS0qf4pQcD5jpz"} title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>

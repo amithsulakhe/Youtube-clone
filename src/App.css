@@ -1,0 +1,10 @@
+.btns::-webkit-scrollbar{
+    height: 0px;
+}
+.sidebar-parent::-webkit-scrollbar{
+    height: 0px;
+}
+.sidebar-parent:hover::-webkit-scrollbar{
+    width: 5px;
+    background-color: rgb(39,39,39);
+}

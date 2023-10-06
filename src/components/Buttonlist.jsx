@@ -1,23 +1,18 @@
 import React from 'react'
 import Button from './Button'
+import { databtn } from '../utils/constant'
+import { useSelector } from 'react-redux'
 
 const Buttonlist = () => {
+
   return (
-    <div className='flex justify-center'>
-        <Button name="All"/>
-        <Button name="Movies"/>
-        <Button name="Music"/>
-        <Button name="Kapil sharma"/>
-        <Button name="Trnding"/>
-        <Button name="Songs"/>
-        <Button name="Darshan"/>
-        <Button name="All"/>
-        <Button name="Movies"/>
-        <Button name="Music"/>
-        <Button name="Kapil sharma"/>
-        <Button name="Trnding"/>
-        <Button name="Songs"/>
-        <Button name="Darshan"/>
+    <div className='w-full'>
+    <div className='flex justify-between gap-2 w-[90%] overflow-x-scroll my-0 mx-auto btns '>
+      {
+        databtn.map((ele,i)=><Button key={i} name={ele}/> )
+      }
+    
+    </div>
     </div>
   )
 }
