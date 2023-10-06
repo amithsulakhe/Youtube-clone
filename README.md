@@ -9,5 +9,15 @@
 # Using of redux toolkit
 # use of tailwind css
 
+# redux
+  - npm i -D @eduxjstoolkit     
+  - npm i react-redux                    
+
+
+# router
+ - npm i react-router-dom 
+
+
+
 
 
