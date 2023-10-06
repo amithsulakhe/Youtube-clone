@@ -73,8 +73,8 @@ const Header = () => {
                 <i className="fa-solid grid place-items-center fa-bars text-2xl cursor-pointer" onClick={handletogglesidebar} ></i>
                 <a href='/' className='flex items-center  gap-1 font-bold  font-serif'>  <img className='h-8' src="https://em-content.zobj.net/content/2020/04/05/yt.png" alt="Youtube" />YouTube</a>
             </div>
-            <div className='w-9/12 flex  justify-center'>
-                <form className='w-full' onSubmit={(e) => e.preventDefault()}>
+            <div className='w-9/12 flex flex-col justify-center'>
+                <form onSubmit={(e) => e.preventDefault()}>
                     <input
                         onFocus={() => setshowsuggestion(true)}
                         ref={ref}
@@ -84,7 +84,7 @@ const Header = () => {
                         placeholder="Search"
                         className={`w-8/12 h-10 px-4 rounded-tl-full rounded-bl-full border  outline-none border-gray-400 ${!darkmoder ? 'bg-black text-white' : 'bg-white text-black'}`}
                     />
-                    <button onClick={sendthedata} className='w-[10%] border bg-gray-900 text-white h-10 rounded-tr-full rounded-br-full'><i className="fa-solid  fa-magnifying-glass"></i></button>
+                    <button onClick={sendthedata} className='w-[10%] border bg-gray-900 text-white h-10 rounded-tr-full rounded-br-full'><i className="fa-solid fa-magnifying-glass"></i></button>
                 </form>
 
                 <div className='relative px-5 py-2 '>
@@ -109,8 +109,8 @@ const Header = () => {
                 </div>
 
             </div>
-            <div>
-                <button onClick={handlechangedarkmode} className={`w-28 h-10 rounded-lg ${!btn ? "bg-black text-white" : "bg-gray-200 text-black"} `}>Dark Mode</button>
+            <div className=' '>
+                <button onClick={handlechangedarkmode} className={`w-28 h-10  rounded-full  ${!btn ? "bg-black text-white" : "bg-gray-200 text-black"} `}>{!btn?"Dark Mode":"White Mode"}</button>
             </div>
             <div className='w-1/4 flex justify-center'>
                 <i className="fa-solid fa-user text-2xl"></i>
