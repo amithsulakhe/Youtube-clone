@@ -15,7 +15,7 @@ const [msg, setmsg] = useState("")
                         msg:"hello good night"
                 }))
              
-        }, 500);
+        }, 1500);
         return ()=>clearInterval(i)
             },[])
             const submitdata=(e)=>{
