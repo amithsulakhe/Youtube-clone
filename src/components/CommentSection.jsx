@@ -75,7 +75,7 @@ const CommentData = [{
 ]
 const Comment=({data})=>{
     const {name,text}=data
-    return <div className='flex shadow-lg items-center rounded-lg bg-gray-100'>
+    return <div className='flex shadow-lg items-center rounded-lg bg-gray-100 '>
         <img className='w-10 h-10' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHv5SRkqgXKiDxk5z4WySyBqhlwGem5gsohjEjs1o&s" alt="logo" />
         <div className='font-bold pl-2'>
             <p>Name:{name}</p>
@@ -94,7 +94,7 @@ const CommentList=({comments})=>{
 }
 const CommentSection = () => {
     return (
-        <div className='m-5 p-3'>
+        <div className='m-5 p-3 w-[800px]'>
             <h1 className='font-bold text-2xl'>Comments</h1>
             <CommentList comments={CommentData}/>
         {/* <Comment data={CommentData[0]}/> */}

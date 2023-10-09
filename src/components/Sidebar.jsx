@@ -7,7 +7,7 @@ const Sidebar = () => {
   const darkmoder=useSelector(store=>store.enabledarkmod.isMode)
 
   return (
-    <div className={` fixed  ${darkmoder?"bg-white text-black":"bg-black text-white"}  shadow-lg w-[15%] h-[88vh] overflow-y-scroll sidebar-parent pt-8 px-4'`}>
+    <div className={` fixed  ${darkmoder?"bg-white text-black":"bg-black text-white"}  shadow-lg w-60 h-[88vh] overflow-y-scroll sidebar-parent pt-8 px-4'`}>
         <ul className='pt-3 leading-10 '>
             <li className={`${darkmoder?"bg-white text-black hover:bg-gray-200":" text-white hover:bg-[#272727]"}  rounded-lg pl-4 mb-2 font-bold cursor-pointer  `} onClick={()=>dispatch(addSearchitem("kannada contents songs"))}><i className="fa-solid fa-house"></i>Home</li>
             <li className={`${darkmoder?"bg-white text-black hover:bg-gray-200":" text-white hover:bg-[#272727]"}  rounded-lg pl-4 mb-2 font-bold cursor-pointer  `} onClick={(e)=>dispatch(addSearchitem(e.target.innerHTML))}>Shorts</li>

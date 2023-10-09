@@ -9,7 +9,7 @@ const MainContainer = () => {
   const sidebarDisplay=useSelector(store=>store.sidebarname.isMenu)
   return (
     <div className='w-full '>
-    <div className={`pt-14  ${darkmoder?"bg-white text-black":"bg-black text-white"} ${sidebarDisplay?"ml-[15%] w-[85%]":"ml-[0%] w-full"} `}>
+    <div className={`${darkmoder?"bg-white ml-0 w-full pt-14 text-black":"bg-black ml-0 w-full pt-14 text-white"}  ${darkmoder?"md:bg-white md:text-black":"md:bg-black md:text-white"} ${sidebarDisplay?"md:ml-[15%] md:w-[85%]":"md:ml-[0%] md:w-full"} `}>
         <Buttonlist/>
         <VideoContainer/>
     </div>

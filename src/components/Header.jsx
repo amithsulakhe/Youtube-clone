@@ -69,12 +69,12 @@ const Header = () => {
     return (
 
         <div className={`p-4 flex fixed w-[100%] z-10  ${darkmoder ? "bg-white text-black" : "bg-black text-white"}   items-center shadow-lg`}>
-            <div className='flex items-center  gap-5 w-1/4'>
+            <div className='flex items-center  gap-2 w-1/4 md:gap-5'>
                 <i className="fa-solid grid place-items-center fa-bars text-2xl cursor-pointer" onClick={handletogglesidebar} ></i>
-                <a href='/' className='flex items-center  gap-1 font-bold  font-serif'>  <img className='h-8' src="https://em-content.zobj.net/content/2020/04/05/yt.png" alt="Youtube" />YouTube</a>
+                <a href='/' className=' font-bold text-[10px] flex items-center font-serif md:text-lg'>  <img className='h-5 md:h-8' src="https://em-content.zobj.net/content/2020/04/05/yt.png" alt="Youtube" />YouTube</a>
             </div>
-            <div className='w-9/12 flex flex-col justify-center'>
-                <form onSubmit={(e) => e.preventDefault()}>
+            <div className='w-9/12  justify-center'>
+                <form className='flex justify-center' onSubmit={(e) => e.preventDefault()}>
                     <input
                         onFocus={() => setshowsuggestion(true)}
                         ref={ref}
@@ -82,12 +82,12 @@ const Header = () => {
                         value={searchBar}
                         type="text"
                         placeholder="Search"
-                        className={`w-8/12 h-10 px-4 rounded-tl-full rounded-bl-full border  outline-none border-gray-400 ${!darkmoder ? 'bg-black text-white' : 'bg-white text-black'}`}
+                        className={`w-40 ml-4  pl-4 h-10 rounded-tl-full rounded-bl-full border  outline-none border-gray-400 ${!darkmoder ? 'bg-black text-white' : 'bg-white text-black'} md:w-8/12`}
                     />
-                    <button onClick={sendthedata} className='w-[10%] border bg-gray-900 text-white h-10 rounded-tr-full rounded-br-full'><i className="fa-solid fa-magnifying-glass"></i></button>
+                    <button onClick={sendthedata} className='w-[10%]  border bg-gray-900 text-white h-10 rounded-tr-full rounded-br-full'><i className="fa-solid fa-magnifying-glass"></i></button>
                 </form>
 
-                <div className='relative px-5 py-2 '>
+                {/* <div className='relative px-5 py-2 '>
                     {
                         showsuggestion &&
                         <ul className={`absolute w-8/12 bg-gray-50  leading-10 rounded-2xl `}>
@@ -106,14 +106,16 @@ const Header = () => {
                     }
 
 
-                </div>
+                </div> */}
 
             </div>
+            <div className='flex gap-2 md:w-1/4 md:gap-7'>
             <div className=' '>
-                <button onClick={handlechangedarkmode} className={`w-28 h-10  rounded-full  ${!btn ? "bg-black text-white" : "bg-gray-200 text-black"} `}>{!btn?"Dark Mode":"White Mode"}</button>
+                <button onClick={handlechangedarkmode} className={`w-8 h-8 rounded-full  ${!btn ? "bg-black text-white" : "bg-gray-200 text-black"} md:w-44 md:h-10`}>{!btn?"Dark Mode":"White Mode"}</button>
             </div>
-            <div className='w-1/4 flex justify-center'>
+            <div className='flex justify-center'>
                 <i className="fa-solid fa-user text-2xl"></i>
+            </div>
             </div>
         </div>
     )
