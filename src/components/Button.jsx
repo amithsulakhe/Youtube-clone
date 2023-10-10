@@ -8,9 +8,9 @@ const Button = ({ name }) => {
   const [clicked, setClicked] = useState(false);
 
   const searchParticularitem = (e) => {
+    // serching particular item
     dispatch(addfounditems([]));
     setClicked(true);
-
     dispatch(addSearchitem(e.target.innerHTML));
   };
 
