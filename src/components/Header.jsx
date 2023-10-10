@@ -68,10 +68,10 @@ const Header = () => {
     }
     return (
 
-        <div className={`p-4 flex fixed w-[100%] z-10  ${darkmoder ? "bg-white text-black" : "bg-black text-white"}   items-center shadow-lg`}>
-            <div className='flex items-center  gap-2 w-1/4 md:gap-5'>
+        <div className={`px-3 py-4 flex fixed w-[100%] z-10  ${darkmoder ? "bg-white text-black" : "bg-black text-white"}   items-center shadow-lg`}>
+            <div className='flex items-center  gap-1 w-1/4 md:gap-10'>
                 <i className="fa-solid grid place-items-center fa-bars text-2xl cursor-pointer" onClick={handletogglesidebar} ></i>
-                <a href='/' className=' font-bold text-[10px] flex items-center font-serif md:text-lg'>  <img className='h-5 md:h-8' src="https://em-content.zobj.net/content/2020/04/05/yt.png" alt="Youtube" />YouTube</a>
+                <a href='/' className=' font-bold text-[10px] flex items-center font-serif md:text-lg'>  <img className='h-5 md:h-8' src="https://em-content.zobj.net/content/2020/04/05/yt.png" alt="Youtube" />MyTube</a>
             </div>
             <div className='w-9/12  justify-center'>
                 <form className='flex justify-center' onSubmit={(e) => e.preventDefault()}>
@@ -82,7 +82,7 @@ const Header = () => {
                         value={searchBar}
                         type="text"
                         placeholder="Search"
-                        className={`w-40 ml-4  pl-4 h-10 rounded-tl-full rounded-bl-full border  outline-none border-gray-400 ${!darkmoder ? 'bg-black text-white' : 'bg-white text-black'} md:w-8/12`}
+                        className={`w-[80%] ml-4  pl-4 h-10 rounded-tl-full rounded-bl-full border  outline-none border-gray-400 ${!darkmoder ? 'bg-black text-white' : 'bg-white text-black'} md:w-8/12`}
                     />
                     <button onClick={sendthedata} className='w-[10%]  border bg-gray-900 text-white h-10 rounded-tr-full rounded-br-full'><i className="fa-solid fa-magnifying-glass"></i></button>
                 </form>
