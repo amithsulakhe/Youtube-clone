@@ -9,14 +9,15 @@ const Button = ({ name }) => {
 
   const searchParticularitem = (e) => {
     // serching particular item
+
     dispatch(addfounditems([]));
     setClicked(true);
-    dispatch(addSearchitem(e.target.innerHTML));
+    dispatch(addSearchitem(e.target.value));
   };
 
   return (
     <div className="">
-      <button
+      <button value={name}
         onClick={(e) => searchParticularitem(e)}
         className={`${
           darkmoder
